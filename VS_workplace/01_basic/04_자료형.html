@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 문자열 + 숫자 (숫자->문자열 형변환), 문자열 + 문자열 : 단순연결
+        document.write("<문자열 + 숫자 (숫자->문자열 형변환), 문자열 + 문자열 : 단순연결>");
+        document.write("<br><br>");
+        var num = 10;
+        var str = "hello world";
+        document.write(num +str);
+        document.write("<br><br><hr>");
+
+        // Boolean형 (비교연산자기호를 이용해 대상 비교의 결과를 반환)
+        var num1 = 10;
+        var num2 = 20;
+        document.write((num1>num2) + "<br><br>");
+        document.write(typeof (num1>num2));
+        document.write("<br><br><hr>");
+
+        // typeof
+        
+        var num3;
+        var num4 = 10;
+        var num5 = "";
+        var num6 = null;
+        var arr = [1,2,3,4];
+        var arr2 = new Array(5);
+        arr2["Key1"] = "value"; //MAP(Key:Value)
+        document.write((typeof 10)+"<br><br>"); //Number
+        document.write((typeof 10.5)+"<br><br>"); //Number
+        document.write((typeof 10e6)+"<br><br>"); //Number
+        document.write((typeof "홍길동")+"<br><br>"); //String
+        document.write((typeof true)+"<br><br>"); //Boolean
+        document.write((typeof num11)+"<br><br>"); //undefined
+        document.write((typeof num3)+"<br><br>"); //undefined
+        document.write((typeof num4)+"<br><br>"); //Number
+        document.write((typeof num5)+"<br><br>"); //String
+        document.write((typeof num6)+"<br><br>"); //object
+        document.write((typeof arr)+"<br><br>"); //object
+        document.write((typeof arr2)+"<br><br>"); //object
+        document.write("<hr>");
+
+        // Object Type
+        var dog = {name:"Poppi", age:3};
+
+        document.write(dog.name+"<br>");
+        document.write(dog.age + "<br>");
+        document.write(typeof dog);
+    </script>
+</body>
+</html>
