@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 01 같은 변수명에 다른 자료형 대입    
+        var var1 = 10;
+        document.write("var1's type : " + (typeof var1) + "<br>"); //number
+        var1 = "홍길동";
+        document.write("var1's type : " + (typeof var1) + "<br>"); //string
+        var1 = true;
+        document.write("var1's type : " + (typeof var1) + "<br>"); //boolean
+        var1 = {key1:"value1", key2:"value2"};
+        document.write("var1's type : " + (typeof var1) + "<br>"); //object
+        document.write("<hr>");
+
+        // 02 암시적형변환(자동형변환)
+        var result = 10 + 10; //number
+        document.write("result's type : " + (typeof result) + "<br>"); //number
+        result = result + "문자열"; //result의 값이 문자열로 자동형변환 이후 문자열 + 연결
+        document.write("result's type : " + (typeof result) + "<br>"); //String
+        document.write("result's type : " +  result + "<br>"); //20문자열
+        document.write("<hr>");
+
+        var result2 = "10"; //string
+        document.write("result2's type : " + (typeof result2) + "<br>"); //string
+        result2 = "20" * "30"; //number
+        document.write("result's value : " + result2 + "<br>"); //600
+        document.write("result2's type : " + (typeof result2) + "<br>"); //number
+        document.write("<hr>");
+
+        var result3 = 50; //number
+        document.write("result3's type : " + (typeof result3) + "<br>");
+        result3 = result3 - "10"; //number
+        document.write("result3's type : " + (typeof result3) + "<br>");
+        document.write("result3's type : " + result3 + "<br>"); //40
+        result3 = result3 - "문자열"; //NaN : Not a Number
+        document.write("result3's value : " + result3 + "<br>");
+        document.write("result3's type : " + (typeof result3) + "<br>");
+        document.write("<hr>");
+
+        //03 명시적형변환(강제형변환)
+        var result4 = 10;
+        document.write("result4 basic Type : " + (typeof result4) + "<br>"); //number
+        document.write("result4 String Type : " + (typeof String(result4)) + "<br>"); //string
+        document.write("result4 Boolean Type : " + (typeof Boolean(result4)) + "<br>"); //boolean
+        document.write("result4 Boolean Value : " + (Boolean(result4)) + "<br>"); //true
+        document.write("result4 Object Type : " + (typeof Object(result4)) + "<br>"); //object
+        
+        function typechangeTest(){
+            t1tag = document.getElementById("t1");
+            t2tag = document.getElementById("t2");
+            alert("두 수의 합 : " + (t1tag.value+t2tag.value)); 
+
+            var value1 = Number(t1tag.value);
+            var value2 = Number(t2tag.value);
+            alert("두수의 합 : " + (value1 + value2));
+        }
+
+    </script>
+
+    <input type="text" id="t1">
+    <input type="text" id="t2">
+    <input type="button" onclick="javascript:typechangeTest()" value="계산">
+</body>
+</html>
