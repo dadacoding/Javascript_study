@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //01 산술연산자
+        var x = 10, y = 4;
+        document.write((x + y)+"<br>"); //14
+        document.write((x - y)+"<br>"); //6
+        document.write((x * y)+"<br>"); //40
+        document.write((x / y)+"<br>"); //나누었을때 나머지 구함 > 2.5
+        document.write((x % y)+"<br>"); //나누었을때 몫을 구함 > 2
+        document.write("<hr>");
+
+        // %연산자기호
+        // 01)짝홀수구분
+        document.write((10%2)+"<br>"); //수 % 2 == 0 --> 짝수
+        document.write((11%2)+"<br>"); //수 % 2 == 1 --> 홀수
+        document.write((12%2)+"<br>");
+        document.write((13%2)+"<br>");
+        document.write((14%2)+"<br>");
+        document.write("<hr>");
+        // 02)배수확인
+        document.write((10%3)+"<br>"); //수 % 3 == 1,2 --> 3의 배수가 아님
+        document.write((11%3)+"<br>"); 
+        document.write((12%3)+"<br>"); //수 % 3 == 0 --> 3의 배수
+        document.write((13%3)+"<br>");
+        document.write((14%3)+"<br>");
+        document.write("<hr>");
+
+        // 03)수의 범위 지정
+        // 수%2 ==> 0,1
+        // 수%3 ==> 0,1,2
+        // 수%4 ==> 0~3
+        // 수%10 ==> 0~9
+        // 수%100 ==> 0~99
+        document.write(Math.random()+"<br>");
+        document.write((Math.random()*10)+"<br>");
+        document.write(Math.floor((Math.random()*10))+"<br>");
+        document.write(Math.floor((Math.random()*100))%15+"<br>"); //0~14까지중에 랜덤하게 나옴
+        document.write("<hr>");
+
+        // 02 복합대입연산자(+=, -=, *=, /* %=)
+        var tmp = 5;
+        tmp += 10;
+        document.write(tmp);
+        document.write("<hr>");
+
+        // 03 증감연산자(++a, a++ : 1증가, --a, a-- : 1감소)
+        var tmp2 = 5;
+        ++tmp2;
+        tmp2++;
+        document.write("<hr>");
+
+        // 04 비교연산자
+        var n1 = 10;
+        var n2 = 20;
+        document.write("n1 > n2 : " + (n1>n2)+"<br>");     //false
+        document.write("n1 >= n2 : " + (n1>=n2)+"<br>");   //false
+        document.write("n1 < n2 : " + (n1<n2)+"<br>");     //true
+        document.write("n1 <= n2 : " + (n1<=n2)+"<br>");   //true
+        document.write("n1 <= n2 : " + (n1<=n2)+"<br>");   //true
+        document.write("n1 == n2 : " + (n1==n2)+"<br>");   //false (동등비교연산자 : 값 일치만 확인)
+        document.write("n1 === n2 : " + (n1===n2)+"<br>"); //false (type비교연산자 : 값 일치 + 자료형까지 확인)
+        document.write("n1 = n2 : " + (n1=n2));            //대입연산자. 비교연산자 x
+        document.write("<hr>");
+
+        // 05 논리연산자
+        // &&, ||
+        document.write("AND연산 : " + (true&&true)+"<br>");    //true
+        document.write("AND연산 : " + (true&&false)+"<br>");   //false
+        document.write("AND연산 : " + (false&&true)+"<br>");   //false
+        document.write("AND연산 : " + (false&&false)+"<br>");  //false
+        document.write("OR연산 : " + (true||true)+"<br>");     //true
+        document.write("OR연산 : " + (true||false)+"<br>");    //true
+        document.write("OR연산 : " + (false||true)+"<br>");    //true
+        document.write("OR연산 : " + (false||false)+"<br>");   //false
+        x=10, y=20, z=30;
+        document.write("AND연산 : " + ((x>y)&&(x>z)) + "<br>"); //false
+        document.write("<hr>");
+
+        // 06 비트연산자
+        var x = 15;
+        document.write(x<<2); //15x2
+        document.write("<br>"); 
+        document.write(x>>2); //15/2
+
+        // 07 + 연산자의 사용
+        // 문자열 + 문자열 = 문자열 연결
+        // 숫자 + 문자열 = 숫자를 문자열로 형변환
+        // "숫자" + "숫자" = 연산처리
+
+    </script>
+</body>
+</html>
+
